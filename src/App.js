@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import { Form } from './components/Form/Form';
+import { Contacts } from './components/Contacts/Contacts';
+import { Filter } from './components/Filter/Filter';
+import { ToastContainer } from 'react-toastify';
 
-function App() {
+import { StyledApp } from './components/AppComponents/AppComponents';
+
+import { useDispatch } from 'react-redux';
+
+import 'react-toastify/dist/ReactToastify.css';
+import { getItems } from './redux/items/items-selectors';
+import { fetchContacts } from './redux/items/items-operations';
+
+export default function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledApp>
+      <Form />
+      <Filter />
+      <Contacts />
+      <ToastContainer />
+    </StyledApp>
   );
 }
-
-export default App;

@@ -1,0 +1,24 @@
+{
+  "contacts": [
+    {
+      "name": "Hennadii",
+      "number": "2312312",
+      "id": 2
+    },
+    {
+      "name": "Мариев",
+      "number": "1231231",
+      "id": 3
+    },
+    {
+      "name": "Ivan",
+      "number": "2312312",
+      "id": 4
+    },
+    {
+      "name": "Марerrewr",
+      "number": "1231231",
+      "id": 5
+    }
+  ]
+}
