@@ -9,9 +9,9 @@ import {
 } from './StyledFormComponents';
 import { toastMessage } from './form-helper';
 import { useSelector } from 'react-redux';
-import { getItems } from '../../redux/items/items-selectors';
+import { getItems } from 'redux/items/items-selectors';
 import { useDispatch } from 'react-redux';
-import { fetchPostSingleContact } from '../../redux/items/items-operations';
+import { fetchPostSingleContact } from 'redux/items/items-operations';
 
 const useInput = (input) => {
   const [value, setValue] = useState(() => '');

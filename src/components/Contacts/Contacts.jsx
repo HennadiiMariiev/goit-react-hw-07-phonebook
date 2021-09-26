@@ -8,16 +8,16 @@ import {
   StyledButton,
 } from './StyledContactsComponents';
 
-import { StyledBanner } from '../AppComponents/AppComponents';
+import { StyledBanner } from 'components/AppComponents/AppComponents';
 
-import { StyledButton as StyledPrimaryButton } from '../Form/StyledFormComponents';
-import { fetchRemoveSingleContact, fetchRemoveAllContacts } from '../../redux/items/items-operations';
+import { StyledButton as StyledPrimaryButton } from 'components/Form/StyledFormComponents';
+import { fetchRemoveSingleContact, fetchRemoveAllContacts } from 'redux/items/items-operations';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { getItems } from '../../redux/items/items-selectors';
-import { getFilter } from '../../redux/filter/filter-selectors';
+import { getItems } from 'redux/items/items-selectors';
+import { getFilter } from 'redux/filter/filter-selectors';
 
-import { toastMessage } from '../Form/form-helper';
+import { toastMessage } from 'components/Form/form-helper';
 
 const applyFilter = (items, filter) => {
   if (filter === '') {

@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { StyledInput, StyledLabel } from './StyledFilterComponents';
-import { setFilter } from '../../redux/filter/filter-actions';
-import { getItems } from '../../redux/items/items-selectors';
-import { getFilter } from '../../redux/filter/filter-selectors';
+import { setFilter } from 'redux/filter/filter-actions';
+import { getItems } from 'redux/items/items-selectors';
+import { getFilter } from 'redux/filter/filter-selectors';
 
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';

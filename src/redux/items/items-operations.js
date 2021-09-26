@@ -1,13 +1,11 @@
-import * as contactsAPI from '../../api/axios';
-import * as contactsActions from '../items/items-actions';
+import * as contactsAPI from 'api/axios';
+import { contactsActions } from 'redux/items/index';
 
 export const fetchContacts = () => async (dispatch) => {
   dispatch(contactsActions.fetchContactsRequest());
 
   try {
     const contacts = await contactsAPI.getAllContacts();
-
-    console.log(contacts);
 
     dispatch(contactsActions.fetchContactsSuccess(contacts));
   } catch (error) {

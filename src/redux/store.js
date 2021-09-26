@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
-import { filterReducer } from './filter/filter-reducer';
-import { itemsReducer } from './items/items-reducer';
-import { loadingReducer } from './loading/loading-reducer';
-import { errorReducer } from './error/error-reducer';
+import { filterReducer } from 'redux/filter/filter-reducer';
+import { itemsReducer } from 'redux/items/items-reducer';
+import { loadingReducer } from 'redux/loading/loading-reducer';
+import { errorReducer } from 'redux/error/error-reducer';
 
 const initialState = {
   contacts: {
