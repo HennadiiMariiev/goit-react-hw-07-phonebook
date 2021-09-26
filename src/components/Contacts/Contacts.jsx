@@ -12,27 +12,14 @@ import { StyledBanner } from 'components/AppComponents/AppComponents';
 
 import { StyledButton as StyledPrimaryButton } from 'components/Form/StyledFormComponents';
 import { fetchRemoveSingleContact, fetchRemoveAllContacts } from 'redux/items/items-operations';
-
 import { useSelector, useDispatch } from 'react-redux';
-import { getItems } from 'redux/items/items-selectors';
-import { getFilter } from 'redux/filter/filter-selectors';
-
-const applyFilter = (items, filter) => {
-  if (filter === '') {
-    return items;
-  }
-
-  const searchStr = filter.toLowerCase();
-  const filteredContacts = items.filter((contact) => contact.name.toLowerCase().includes(searchStr));
-  return filteredContacts;
-};
+import { getFilteredContacts, getState } from 'redux/contacts-selectors';
 
 export const Contacts = () => {
-  const items = useSelector(getItems);
-  const filter = useSelector(getFilter);
+  const state = useSelector(getState);
   const dispatch = useDispatch();
 
-  const makeContactsList = applyFilter(items, filter).map(({ name, number, id }) => {
+  const makeContactsList = getFilteredContacts(state).map(({ name, number, id }) => {
     return (
       <StyledItem key={id}>
         <StyledName>{name}</StyledName>
@@ -51,7 +38,7 @@ export const Contacts = () => {
 
   return (
     <StyledDiv>
-      {items.length === 0 ? (
+      {makeContactsList.length === 0 ? (
         <StyledBanner>No contacts...</StyledBanner>
       ) : (
         <>

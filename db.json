@@ -1,18 +1,18 @@
 {
   "contacts": [
     {
-      "name": "Мариев",
-      "number": "1231231",
+      "name": "Ivan",
+      "number": "123123",
       "id": 1
     },
     {
-      "name": "Ivan",
-      "number": "1231231",
+      "name": "Roman",
+      "number": "546456",
       "id": 2
     },
     {
-      "name": "Hennadii",
-      "number": "1231231",
+      "name": "Peter",
+      "number": "2323452",
       "id": 3
     }
   ]

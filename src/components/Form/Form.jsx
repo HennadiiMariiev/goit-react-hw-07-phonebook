@@ -9,7 +9,7 @@ import {
 } from './StyledFormComponents';
 import { toastMessage } from './form-helper';
 import { useSelector } from 'react-redux';
-import { getItems } from 'redux/items/items-selectors';
+import { getItems } from 'redux/contacts-selectors';
 import { useDispatch } from 'react-redux';
 import { fetchPostSingleContact } from 'redux/items/items-operations';
 
