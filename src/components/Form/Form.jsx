@@ -76,8 +76,6 @@ export function Form() {
 
     dispatch(fetchPostSingleContact({ name, number }));
 
-    toastMessage('success', `New contact "${name}" was added!`);
-
     clearInputs();
   };
   //#endregion

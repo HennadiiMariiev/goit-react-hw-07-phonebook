@@ -17,8 +17,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getItems } from 'redux/items/items-selectors';
 import { getFilter } from 'redux/filter/filter-selectors';
 
-import { toastMessage } from 'components/Form/form-helper';
-
 const applyFilter = (items, filter) => {
   if (filter === '') {
     return items;
@@ -41,8 +39,7 @@ export const Contacts = () => {
         <StyledNumber>{number}</StyledNumber>
         <StyledButton
           onClick={(event) => {
-            dispatch(fetchRemoveSingleContact(event.target.value));
-            toastMessage('success', `Contact "${name}" was deleted!`);
+            dispatch(fetchRemoveSingleContact({ id: event.target.value, name }));
           }}
           value={id}
         >

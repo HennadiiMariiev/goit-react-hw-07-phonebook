@@ -15,6 +15,10 @@ export const toastMessage = (type, text) => {
       message = () => toast.error(text);
       break;
 
+    case 'info':
+      message = () => toast.info(text);
+      break;
+
     default:
       message = () => toast.dark(text);
   }
